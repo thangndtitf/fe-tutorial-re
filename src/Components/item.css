@@ -1,0 +1,9 @@
+.Items{
+    opacity: 1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Items-done{
+    opacity: .3;
+    text-decoration: line-through;
+}
