@@ -4,6 +4,7 @@ import Items from "./Components/Items.js";
 import { Component } from "react";
 import Time from "./Components/Time.js";
 import Button from "./Components/Button";
+import TextForm from "./Components/TextForm";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -20,8 +21,9 @@ class App extends Component {
         {this.items.map((item, index) => (
           <Items key={index} item={item} />
         ))}
-        <Time />
-        <Button />  
+        {/* <Time />
+        <Button /> */}
+        <TextForm />
       </div>
     );
   }

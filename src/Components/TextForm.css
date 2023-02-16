@@ -1,0 +1,22 @@
+.textFormCpn{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: lightgray;
+    text-align: center;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+
+.textFormEmptyWarn{
+    opacity: 1;
+    color: red;
+}
+
+.textFormEmptyWarn_done{
+    opacity: 0;
+    background-color: white;
+}
+
+.textForm{
+    background-color: white;
+}
