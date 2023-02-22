@@ -4,12 +4,14 @@ import "./item.css";
 class Items extends Component {
   render() {
     // return <div className="Items">{this.props.item.title}</div>;
+
     return (
       <div
         className={classNames(
           { "Items-done": this.props.item.isactive === 1 },
           { Items: this.props.item.isactive === 0 }
         )}
+        onClick={this.props.onClick}
       >
         {this.props.item.title}
       </div>

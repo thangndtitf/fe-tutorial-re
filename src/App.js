@@ -8,18 +8,37 @@ import TextForm from "./Components/TextForm";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.items = [
-      { title: "Di choi", isactive: 0 },
-      { title: "Di hoc", isactive: 0 },
-      { title: "Di lam", isactive: 1 },
-    ];
+    this.state = {
+      items: [
+        { title: "Di choi", isactive: 0 },
+        { title: "Di hoc", isactive: 0 },
+        { title: "Di lam", isactive: 1 },
+      ],
+    };
+    this.onItemClick = this.onItemClick.bind(this);
+    // this.items = [
+    //   { title: "Di choi", isactive: 0 },
+    //   { title: "Di hoc", isactive: 0 },
+    //   { title: "Di lam", isactive: 1 },
+    // ];
+  }
+
+  onItemClick(index) {
+    var item = this.items.map(function (index) {
+      if (index > 0) {
+        return this.items[index];
+      }
+    });
+    this.setState({
+      items: [item],
+    });
   }
 
   render() {
     return (
       <div className="App">
-        {this.items.map((item, index) => (
-          <Items key={index} item={item} />
+        {this.state.items.map((item, index) => (
+          <Items key={index} item={item} onClick={this.onItemClick(index)} />
         ))}
         {/* <Time />
         <Button /> */}
